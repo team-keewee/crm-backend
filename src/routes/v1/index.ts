@@ -1,0 +1,32 @@
+import { Router } from "express";
+import { authRouter } from "./auth.js";
+import { usersRouter } from "./users.js";
+import { accountsRouter } from "./accounts.js";
+import { contactsRouter } from "./contacts.js";
+import { dealsRouter } from "./deals.js";
+import { engagementsRouter } from "./engagements.js";
+import { projectsRouter } from "./projects.js";
+import { tasksRouter } from "./tasks.js";
+import { deliverablesRouter } from "./deliverables.js";
+import { dashboardRouter } from "./dashboard.js";
+import { exportsRouter } from "./exports.js";
+import { serviceCatalogRouter } from "./serviceCatalog.js";
+import { activitiesRouter } from "./activities.js";
+import { auditRouter } from "./audit.js";
+
+export const v1Router = Router();
+
+v1Router.use(authRouter);
+v1Router.use(usersRouter);
+v1Router.use(accountsRouter);
+v1Router.use(contactsRouter);
+v1Router.use(dealsRouter);
+v1Router.use(engagementsRouter);
+v1Router.use(projectsRouter);
+v1Router.use(tasksRouter);
+v1Router.use(deliverablesRouter);
+v1Router.use(dashboardRouter);
+v1Router.use(exportsRouter);
+v1Router.use(serviceCatalogRouter);
+v1Router.use(activitiesRouter);
+v1Router.use(auditRouter);
